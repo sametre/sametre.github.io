@@ -26,7 +26,7 @@ const projects = [
     signal: "Omnichannel Commerce",
     metric: "Web · iOS · Android",
     tags: ["Laravel 13", "React 19", "Inertia.js", "Flutter", "Filament", "MSSQL", "PayTR"],
-    href: "https://github.com/aptus0/KaracabeyGrossMarket",
+    href: "https://github.com/sametre/KaracabeyGrossMarket",
   },
   {
     number: "02",
@@ -45,7 +45,7 @@ const projects = [
     signal: "Unified Retail",
     metric: "Web · Native iOS",
     tags: ["Laravel 13", "Vue 3", "TypeScript", "Inertia.js", "SwiftUI", "MSSQL", "Sanctum"],
-    href: "https://github.com/aptus0/ErlerAvm",
+    href: "https://github.com/sametre/ErlerAvm",
   },
   {
     number: "03",
@@ -65,7 +65,7 @@ const projects = [
     signal: "R3 KOBİ Çözümleri",
     metric: "Desktop · SQL · AI",
     tags: [".NET", "C#", "SQL", "Windows Desktop", "REST API", "ERP", "R3 AI"],
-    href: "https://github.com/aptus0/R3",
+    href: "https://github.com/sametre/R3",
   },
 ];
 
