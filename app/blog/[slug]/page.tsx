@@ -21,7 +21,7 @@ export async function generateMetadata({
     title: post.title,
     description: post.excerpt,
     keywords: post.keywords,
-    authors: [{ name: "Samet ER", url: "https://aptus0.github.io/about" }],
+    authors: [{ name: "Samet ER", url: "https://sametre.github.io/about" }],
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title, description: post.excerpt, type: "article",
@@ -48,8 +48,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@context": "https://schema.org", "@type": "BlogPosting",
     headline: post.title, description: post.excerpt, datePublished: post.date,
     dateModified: post.date, inLanguage: "tr-TR", keywords: post.keywords.join(", "),
-    mainEntityOfPage: `https://aptus0.github.io/blog/${post.slug}`,
-    author: { "@type": "Person", name: "Samet ER", url: "https://aptus0.github.io/about" },
+    mainEntityOfPage: `https://sametre.github.io/blog/${post.slug}`,
+    author: { "@type": "Person", name: "Samet ER", url: "https://sametre.github.io/about" },
     publisher: { "@type": "Person", name: "Samet ER" },
   };
 

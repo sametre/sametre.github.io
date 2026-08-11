@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aptus0.github.io"),
+  metadataBase: new URL("https://sametre.github.io"),
   title: {
     default: "Samet | Salesforce Developer — Apex, LWC ve CRM",
     template: "%s | Samet Salesforce Developer",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Salesforce Developer Samet'in Apex, Lightning Web Components, Flow, Sales Cloud, Service Cloud ve CRM entegrasyonu projelerini keşfedin.",
   applicationName: "Samet Salesforce Developer Portfolio",
-  authors: [{ name: "Samet", url: "https://aptus0.github.io" }],
+  authors: [{ name: "Samet", url: "https://sametre.github.io" }],
   creator: "Samet",
   publisher: "Samet",
   category: "technology",
@@ -87,10 +87,10 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://aptus0.github.io/#person",
+  "@id": "https://sametre.github.io/#person",
     name: "Samet ER",
-  url: "https://aptus0.github.io/",
-  image: "https://aptus0.github.io/samet-profile-square.png",
+  url: "https://sametre.github.io/",
+  image: "https://sametre.github.io/samet-profile-square.png",
   jobTitle: "Salesforce Developer",
   description:
     "Apex, Lightning Web Components, Flow ve Salesforce entegrasyonları geliştiren Salesforce Developer.",
@@ -105,7 +105,7 @@ const structuredData = {
     "REST API",
     "CRM Automation",
   ],
-  sameAs: ["https://github.com/aptus0", "https://www.salesforce.com/trailblazer/esdwwv1meq5dlx2mq7"],
+  sameAs: ["https://github.com/sametre", "https://www.salesforce.com/trailblazer/esdwwv1meq5dlx2mq7"],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bursa",

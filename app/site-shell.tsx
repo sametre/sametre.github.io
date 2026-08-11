@@ -1,5 +1,5 @@
 export const linkedinUrl = "https://www.linkedin.com/in/samet-er-75915a3a3/";
-export const githubUrl = "https://github.com/aptus0";
+export const githubUrl = "https://github.com/sametre";
 
 export function SiteHeader({ locale = "tr" }: { locale?: "tr" | "en" }) {
   const en = locale === "en";
