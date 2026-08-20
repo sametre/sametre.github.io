@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="tr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/logo.svg" as="image"/><link rel="preload" href="https://cdn.simpleicons.org/salesforce/00A1E0" as="image"/><link rel="stylesheet" href="/assets/index-Ba3Z74dx.css" data-rsc-css-href="/assets/index-Ba3Z74dx.css" data-precedence="vite-rsc/importer-resources"/><link rel="modulepreload" href="/assets/layout-segment-context-DVUezMEE.js" crossorigin=""/><link rel="modulepreload" href="/assets/rolldown-runtime-S-ySWqyJ.js" crossorigin=""/><link rel="modulepreload" href="/assets/index--PDPj2bJ.js" crossorigin=""/><link rel="modulepreload" href="/assets/framework-XU8gKkFC.js" crossorigin=""/><title>9 critical decisions for Salesforce ERP integration | Samet Salesforce Developer</title><meta name="description" content="Moving customer, inventory, quote, order and invoice data reliably between Salesforce and ERP."/><meta name="application-name" content="Samet Salesforce Developer Portfolio"/><meta name="referrer" content="origin-when-cross-origin"/><meta name="keywords" content="Salesforce Developer,Salesforce Geliştirici,Apex Developer,Lightning Web Components,LWC Developer,Salesforce Flow,Sales Cloud,Service Cloud,Experience Cloud,Salesforce Entegrasyonu,CRM Developer,Bursa Salesforce Developer,Samet Salesforce"/><meta name="author" content="Samet"/><link rel="author" href="https://sametre.github.io"/><meta name="creator" content="Samet"/><meta name="publisher" content="Samet"/><meta name="format-detection" content="telephone=no, address=no, email=no"/><meta name="category" content="technology"/><meta name="robots" content="index, follow"/><meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/><meta property="og:title" content="Samet | Salesforce Developer"/><meta property="og:description" content="Apex, LWC, Flow ve entegrasyonlarla iş sonuçları üreten Salesforce çözümleri."/><meta property="og:url" content="https://sametre.github.io/"/><meta property="og:site_name" content="Samet — Salesforce Developer"/><meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/><meta property="og:image" content="https://sametre.github.io/og.png"/><meta property="og:image:width" content="1734"/><meta property="og:image:height" content="907"/><meta property="og:image:alt" content="Samet Salesforce Developer portföyü"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Samet | Salesforce Developer"/><meta name="twitter:description" content="Apex, LWC, Flow ve entegrasyonlarla güçlü Salesforce çözümleri."/><meta name="twitter:image" content="https://sametre.github.io/og.png"/><link rel="shortcut icon" href="https://sametre.github.io/favicon.svg"/><link rel="icon" href="https://sametre.github.io/favicon.svg" type="image/svg+xml"/><link rel="apple-touch-icon" href="https://sametre.github.io/apple-touch-icon.svg"/><link rel="manifest" href="https://sametre.github.io/manifest.webmanifest"/><link rel="canonical" href="https://sametre.github.io/en/blog/salesforce-erp-integration-best-practices"/><script>self.__VINEXT_RSC_PARAMS__={"slug":"salesforce-erp-integration-best-practices"}</script><script>self.__VINEXT_RSC_NAV__={"pathname":"/en/blog/salesforce-erp-integration-best-practices/","searchParams":[]}</script><link rel="modulepreload" href="/assets/index--PDPj2bJ.js" />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_0tvmz3h { font-family: 'Geist', sans-serif; }
+
+.__variable_geist_0tvmz3h { --font-geist-sans: 'Geist', sans-serif; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_mono_1diim1n { font-family: 'Geist Mono', sans-serif; }
+
+.__variable_geist_mono_1diim1n { --font-geist-mono: 'Geist Mono', sans-serif; }
+</style>
+</head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://sametre.github.io/#person","name":"Samet ER","url":"https://sametre.github.io/","image":"https://sametre.github.io/samet-profile-square.png","jobTitle":"Salesforce Developer","description":"Apex, Lightning Web Components, Flow ve Salesforce entegrasyonları geliştiren Salesforce Developer.","knowsAbout":["Salesforce","Apex","Lightning Web Components","Salesforce Flow","Sales Cloud","Service Cloud","Experience Cloud","REST API","CRM Automation"],"sameAs":["https://github.com/sametre","https://www.salesforce.com/trailblazer/esdwwv1meq5dlx2mq7"],"address":{"@type":"PostalAddress","addressLocality":"Bursa","addressCountry":"TR"}}</script><main><header class="nav shell"><a class="brand" href="/" aria-label="Ana sayfa"><img src="/logo.svg" alt="Samet ER — Salesforce Developer"/><span class="salesforce-badge"><img src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="" width="18" height="18"/><span>Agentforce</span></span></a><nav aria-label="Ana menü"><a href="/en/projects">Projects</a><a href="/en/services">Services</a><a href="/en/about">About</a><a href="/en/blog">Blog</a></nav><a class="language-switch" href="/" lang="tr">TR</a><a class="nav-cta" href="https://www.linkedin.com/in/samet-er-75915a3a3/" target="_blank" rel="noreferrer">Let&#x27;s work together<!-- --> <span>↗</span></a></header><article class="shell blog-article"><a class="blog-back" href="/en/blog">← All articles</a><div class="blog-article-heading"><span class="section-number">Technical note</span><h1>9 critical decisions for Salesforce ERP integration</h1><p>Moving customer, inventory, quote, order and invoice data reliably between Salesforce and ERP.</p><time dateTime="2026-07-28">2026-07-28</time></div><div class="blog-body"><p>Salesforce ERP integration starts with data ownership, not a connector. The source of truth for customers, products, pricing, inventory, orders and invoices must be explicit.</p><p>Synchronous and asynchronous flows should follow business expectations. Interactive price checks may be synchronous, while invoice transfers can use queues or platform events.</p><p>External IDs, idempotency keys, retries, timeouts and dead-letter handling prevent duplicates and silent data loss. Integration users should have least-privilege access.</p><p>Business users need monitoring as much as engineers do. They should see why an order failed and restart it safely without reading code.</p></div></article><section class="contact page-contact"><footer class="shell"><a class="brand" href="/" aria-label="Ana sayfaya dön"><img src="/logo.svg" alt="Samet ER — Salesforce Developer"/></a><p>© 2026 Samet ER. Bursa, <!-- -->Türkiye<!-- -->.</p><div><a href="https://www.linkedin.com/in/samet-er-75915a3a3/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sametre" target="_blank" rel="noreferrer">GitHub</a></div></footer></section></main><script id="_R_">import("/assets/index--PDPj2bJ.js")</script></body></html><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("2:I[\"8c0f216c4604\",[],\"Children\",1]\n:HL[\"/assets/index-Ba3Z74dx.css\",\"style\"]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("0:{\"__route\":\"route:/en/blog/salesforce-erp-integration-best-practices/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"page:/en/blog/salesforce-erp-integration-best-practices/\":\"$L1\",\"layout:/\":[[[[\"$\",\"link\",\"css:/assets/index-Ba3Z74dx.css\",{\"rel\":\"stylesheet\",\"precedence\":\"vite-rsc/importer-resources\",\"href\":\"/assets/index-Ba3Z74dx.css\",\"data-rsc-css-href\":\"/assets/index-Ba3Z74dx.css\"}],\"$undefined\"],[\"$\",\"html\",null,{\"lang\":\"tr\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased\",\"children\":[[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Person\\\",\\\"@id\\\":\\\"https://sametre.github.io/#person\\\",\\\"name\\\":\\\"Samet ER\\\",\\\"url\\\":\\\"https://sametre.github.io/\\\",\\\"image\\\":\\\"https://sametre.github.io/samet-profile-square.png\\\",\\\"jobTitle\\\":\\\"Salesforce Developer\\\",\\\"description\\\":\\\"Apex, Lightning Web Components, Flow ve Salesforce entegrasyonları geliştiren Salesforce Developer.\\\",\\\"knowsAbout\\\":[\\\"Salesforce\\\",\\\"Apex\\\",\\\"Lightning Web Components\\\",\\\"Salesforce Flow\\\",\\\"Sales Cloud\\\",\\\"Service Cloud\\\",\\\"Experience Cloud\\\",\\\"REST API\\\",\\\"CRM Automation\\\"],\\\"sameAs\\\":[\\\"https://github.com/sametre\\\",\\\"https://www.salesforce.com/trailblazer/esdwwv1meq5dlx2mq7\\\"],\\\"address\\\":{\\\"@type\\\":\\\"PostalAddress\\\",\\\"addressLocality\\\":\\\"Bursa\\\",\\\"addressCountry\\\":\\\"TR\\\"}}\"}}],[\"$\",\"$L2\",null,{}]]}]}]],null],\"route:/en/blog/salesforce-erp-integration-best-practices/\":[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"9 critical decisions for Salesforce ERP integration | Samet Salesforce Developer\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Moving customer, inventory, quote, order and invoice data reliably between Salesforce and ERP.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"application-name\",\"content\":\"Samet Salesforce Developer Portfolio\"}],[\"$\",\"meta\",\"3\",{\"name\":\"referrer\",\"content\":\"origin-when-cross-origin\"}],[\"$\",\"meta\",\"4\",{\"name\":\"keywords\",\"content\":\"Salesforce Developer,Salesforce Geliştirici,Apex Developer,Lightning Web Components,LWC Developer,Salesforce Flow,Sales Cloud,Service Cloud,Experience Cloud,Salesforce Entegrasyonu,CRM Developer,Bursa Salesforce Developer,Samet Salesforce\"}],[\"$\",\"meta\",\"5\",{\"name\":\"author\",\"content\":\"Samet\"}],[\"$\",\"link\",\"6\",{\"rel\":\"author\",\"href\":\"https://sametre.github.io\"}],[\"$\",\"meta\",\"7\",{\"name\":\"creator\",\"content\":\"Samet\"}],[\"$\",\"meta\",\"8\",{\"name\":\"publisher\",\"content\":\"Samet\"}],[\"$\",\"meta\",\"9\",{\"name\":\"format-detection\",\"content\":\"telephone=no, address=no, email=no\"}],[\"$\",\"meta\",\"10\",{\"name\":\"category\",\"content\":\"technology\"}],[\"$\",\"meta\",\"11\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"meta\",\"12\",{\"name\":\"googlebot\",\"content\":\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:title\",\"content\":\"Samet | Salesforce Developer\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:description\",\"content\":\"Apex, LWC, Flow ve entegrasyonlarla iş sonuçları üreten Salesforce çözümleri.\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:url\",\"content\":\"https://sametre.github.io/\"}],[\"$\",\"meta\",\"16\",{\"property\":\"og:site_name\",\"content\":\"Samet — Salesforce Developer\"}],[\"$\",\"meta\",\"17\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"18\",{\"property\":\"og:locale\",\"content\":\"tr_TR\"}],[\"$\",\"meta\",\"19\",{\"property\":\"og:image\",\"content\":\"https://sametre.github.io/og.png\"}],[\"$\",\"meta\",\"20\",{\"property\":\"og:image:width\",\"content\":\"1734\"}],[\"$\",\"meta\",\"21\",{\"property\":\"og:image:height\",\"content\":\"907\"}],[\"$\",\"meta\",\"22\",{\"property\":\"og:image:alt\",\"content\":\"Samet Salesforce Developer portföyü\"}],[\"$\",\"meta\",\"23\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"24\",{\"name\":\"twitter:title\",\"content\":\"Samet | Salesforce Developer\"}],[\"$\",\"meta\",\"25\",{\"name\":\"twitter:description\",\"content\":\"Apex, LWC, Flow ve entegrasyonlarla güçlü Salesforce çözümleri.\"}],[\"$\",\"meta\",\"26\",{\"name\":\"twitter:image\",\"content\":\"https://sametre.github.io/og.png\"}],\"$L3\",\"$L4\",\"$L5\",\"$L6\",\"$L7\"],\"$L8\"],\"$L9\"],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:1g9bbfsb4o1rj\",\"deploymentVersion\":\"b77d0f9e-a480-46b9-a945-05157b1f2ab9\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null}}\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("a:I[\"15c18cfaeeff\",[],\"LayoutSegmentProvider\",1]\nb:I[\"8c0f216c4604\",[],\"Slot\",1]\nc:I[\"593f344dc510\",[],\"RedirectBoundary\",1]\n3:[\"$\",\"link\",\"27\",{\"rel\":\"shortcut icon\",\"href\":\"https://sametre.github.io/favicon.svg\"}]\n4:[\"$\",\"link\",\"28\",{\"rel\":\"icon\",\"href\":\"https://sametre.github.io/favicon.svg\",\"type\":\"image/svg+xml\"}]\n5:[\"$\",\"link\",\"29\",{\"rel\":\"apple-touch-icon\",\"href\":\"https://sametre.github.io/apple-touch-icon.svg\"}]\n6:[\"$\",\"link\",\"30\",{\"rel\":\"manifest\",\"href\":\"https://sametre.github.io/manifest.webmanifest\"}]\n7:[\"$\",\"link\",\"31\",{\"rel\":\"canonical\",\"href\":\"https://sametre.github.io/en/blog/salesforce-erp-integration-best-practices\"}]\n8:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n9:[\"$\",\"$La\",null,{\"segmentMap\":{\"children\":[\"en\",\"blog\",\"salesforce-erp-integration-best-practices\"]},\"children\":[\"$\",\"$Lb\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"$La\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$Lb\",null,{\"id\":\"page:/en/blog/salesforce-erp-integration-best-practices/\"}]}]}]}]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push(":HL[\"/logo.svg\",\"image\"]\n:HL[\"https://cdn.simpleicons.org/salesforce/00A1E0\",\"image\"]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("1:[\"$\",\"main\",null,{\"children\":[[\"$\",\"header\",null,{\"className\":\"nav shell\",\"children\":[[\"$\",\"a\",null,{\"className\":\"brand\",\"href\":\"/\",\"aria-label\":\"Ana sayfa\",\"children\":[[\"$\",\"img\",null,{\"src\":\"/logo.svg\",\"alt\":\"Samet ER — Salesforce Developer\"}],[\"$\",\"span\",null,{\"className\":\"salesforce-badge\",\"children\":[[\"$\",\"img\",null,{\"src\":\"https://cdn.simpleicons.org/salesforce/00A1E0\",\"alt\":\"\",\"width\":\"18\",\"height\":\"18\"}],[\"$\",\"span\",null,{\"children\":\"Agentforce\"}]]}]]}],[\"$\",\"nav\",null,{\"aria-label\":\"Ana menü\",\"children\":[[\"$\",\"a\",null,{\"href\":\"/en/projects\",\"children\":\"Projects\"}],[\"$\",\"a\",null,{\"href\":\"/en/services\",\"children\":\"Services\"}],[\"$\",\"a\",null,{\"href\":\"/en/about\",\"children\":\"About\"}],[\"$\",\"a\",null,{\"href\":\"/en/blog\",\"children\":\"Blog\"}]]}],[\"$\",\"a\",null,{\"className\":\"language-switch\",\"href\":\"/\",\"lang\":\"tr\",\"children\":\"TR\"}],[\"$\",\"a\",null,{\"className\":\"nav-cta\",\"href\":\"https://www.linkedin.com/in/samet-er-75915a3a3/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[\"Let's work together\",\" \",[\"$\",\"span\",null,{\"children\":\"↗\"}]]}]]}],[\"$\",\"article\",null,{\"className\":\"shell blog-article\",\"children\":[[\"$\",\"a\",null,{\"className\":\"blog-back\",\"href\":\"/en/blog\",\"children\":\"← All articles\"}],[\"$\",\"div\",null,{\"className\":\"blog-article-heading\",\"children\":[[\"$\",\"span\",null,{\"className\":\"section-number\",\"children\":\"Technical note\"}],[\"$\",\"h1\",null,{\"children\":\"9 critical decisions for Salesforce ERP integration\"}],[\"$\",\"p\",null,{\"children\":\"Moving customer, inventory, quote, order and invoice data reliably between Salesforce and ERP.\"}],[\"$\",\"time\",null,{\"dateTime\":\"2026-07-28\",\"children\":\"2026-07-28\"}]]}],[\"$\",\"div\",null,{\"className\":\"blog-body\",\"children\":[[\"$\",\"p\",\"Salesforce ERP integration starts with data ownership, not a connector. The source of truth for customers, products, pricing, inventory, orders and invoices must be explicit.\",{\"children\":\"Salesforce ERP integration starts with data ownership, not a connector. The source of truth for customers, products, pricing, inventory, orders and invoices must be explicit.\"}],[\"$\",\"p\",\"Synchronous and asynchronous flows should follow business expectations. Interactive price checks may be synchronous, while invoice transfers can use queues or platform events.\",{\"children\":\"Synchronous and asynchronous flows should follow business expectations. Interactive price checks may be synchronous, while invoice transfers can use queues or platform events.\"}],[\"$\",\"p\",\"External IDs, idempotency keys, retries, timeouts and dead-letter handling prevent duplicates and silent data loss. Integration users should have least-privilege access.\",{\"children\":\"External IDs, idempotency keys, retries, timeouts and dead-letter handling prevent duplicates and silent data loss. Integration users should have least-privilege access.\"}],[\"$\",\"p\",\"Business users need monitoring as much as engineers do. They should see why an order failed and restart it safely without reading code.\",{\"children\":\"Business users need monitoring as much as engineers do. They should see why an order failed and restart it safely without reading code.\"}]]}]]}],[\"$\",\"section\",null,{\"className\":\"contact page-contact\",\"children\":[\"$\",\"footer\",null,{\"className\":\"shell\",\"children\":[[\"$\",\"a\",null,{\"className\":\"brand\",\"href\":\"/\",\"aria-label\":\"Ana sayfaya dön\",\"children\":[\"$\",\"img\",null,{\"src\":\"/logo.svg\",\"alt\":\"Samet ER — Salesforce Developer\"}]}],[\"$\",\"p\",null,{\"children\":[\"© 2026 Samet ER. Bursa, \",\"Türkiye\",\".\"]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"a\",null,{\"href\":\"https://www.linkedin.com/in/samet-er-75915a3a3/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"LinkedIn\"}],[\"$\",\"a\",null,{\"href\":\"https://github.com/sametre\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":\"GitHub\"}]]}]]}]}]]}]\n")</script><script>self.__VINEXT_RSC_DONE__=true</script>
