@@ -46,10 +46,11 @@ export default function Home() {
         <div className="hero-grid" aria-hidden="true" />
         <div className="eyebrow">
           <span className="status-dot" />
-          Salesforce projeleri için müsait · Bursa
+          <SalesforceBadge label="Salesforce · Agentforce" />
+          Yeni Agentforce projeleri için müsait · Bursa
         </div>
         <h1>
-          Salesforce&apos;u <em>iş sonuçlarına</em>
+          Agentforce&apos;u <em>iş sonuçlarına</em>
           <br />
           dönüşen güçlü
           <br />
@@ -57,8 +58,8 @@ export default function Home() {
         </h1>
         <div className="hero-bottom">
           <p>
-            Merhaba, ben Samet ER. Apex, Lightning Web Components ve otomasyon
-            gücünü kullanarak işletmeler için ölçeklenebilir Salesforce
+            Merhaba, ben Samet ER. Agentforce, Apex, Lightning Web Components
+            ve otomasyonla işletmeler için güvenilir, insan denetimli CRM
             deneyimleri geliştiriyorum.
           </p>
           <a className="circle-link" href="/projects" aria-label="Projeleri gör">
@@ -69,15 +70,15 @@ export default function Home() {
         <div className="hero-orbit orbit-one">✦</div>
         <div className="hero-orbit orbit-two">✦</div>
         <div className="hero-proof">
+          <span>Agentforce</span><b>Topics · Actions · Trust</b>
           <span>Salesforce</span><b>Apex · LWC · Flow</b>
-          <span>Enterprise</span><b>ERP · CRM · Commerce</b>
         </div>
       </section>
 
       <section className="trust-strip">
         <div className="shell trust-inner">
-          <span>APEX</span><i>✦</i><span>LIGHTNING</span><i>✦</i>
-          <span>AUTOMATION</span><i>✦</i><span>INTEGRATION</span>
+          <span>AGENTFORCE</span><i>✦</i><span>SALESFORCE</span><i>✦</i>
+          <span>TRUSTED AI</span><i>✦</i><span>INTEGRATION</span>
         </div>
       </section>
 
@@ -123,7 +124,7 @@ export default function Home() {
               <span className="section-number">(02)</span>
               <p>Neler yapıyorum?</p>
             </div>
-            <h2>Sadece çalışan değil,<br /><em>değer üreten</em> sistemler.</h2>
+            <h2>Akıllı, güvenilir ve<br /><em>ölçülebilir</em> sistemler.</h2>
           </div>
           <div className="service-list">
             {services.map(([number, title, description]) => (
@@ -149,12 +150,12 @@ export default function Home() {
           </div>
           <div className="about-copy">
             <span className="section-number">(03) Hakkımda</span>
-            <h2>Salesforce benim için bir CRM&apos;den fazlası: <em>iş süreçlerini dönüştüren bir platform.</em></h2>
+            <h2>Salesforce benim için bir CRM&apos;den fazlası: <em>güvenilir AI deneyimlerinin zemini.</em></h2>
             <p>
               ERP ve full-stack geliştirme deneyimimi Salesforce ekosistemiyle
               birleştiriyor; karmaşık iş ihtiyaçlarını sürdürülebilir CRM
               çözümlerine dönüştürüyorum. Bugün odağım Apex, LWC, Flow,
-              Agentforce ve yapay zekâ destekli müşteri deneyimleri.
+              Agentforce ile yapay zekâ destekli müşteri deneyimleri.
             </p>
             <div className="stats">
               <div><strong>10+</strong><span>Teknoloji alanı</span></div>
@@ -179,4 +180,4 @@ export default function Home() {
     </main>
   );
 }
-import { SiteFooter, SiteHeader, githubUrl, linkedinUrl } from "./site-shell";
+import { SalesforceBadge, SiteFooter, SiteHeader, githubUrl, linkedinUrl } from "./site-shell";

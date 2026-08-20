@@ -1,6 +1,15 @@
 export const linkedinUrl = "https://www.linkedin.com/in/samet-er-75915a3a3/";
 export const githubUrl = "https://github.com/sametre";
 
+export function SalesforceBadge({ label = "Salesforce" }: { label?: string }) {
+  return (
+    <span className="salesforce-badge">
+      <img src="https://cdn.simpleicons.org/salesforce/00A1E0" alt="" width="18" height="18" />
+      <span>{label}</span>
+    </span>
+  );
+}
+
 export function SiteHeader({ locale = "tr" }: { locale?: "tr" | "en" }) {
   const en = locale === "en";
   const prefix = en ? "/en" : "";
@@ -8,6 +17,7 @@ export function SiteHeader({ locale = "tr" }: { locale?: "tr" | "en" }) {
     <header className="nav shell">
       <a className="brand" href="/" aria-label="Ana sayfa">
         <img src="/logo.svg" alt="Samet ER — Salesforce Developer" />
+        <SalesforceBadge label="Agentforce" />
       </a>
       <nav aria-label="Ana menü">
         <a href={`${prefix}/projects`}>{en ? "Projects" : "Projeler"}</a>

@@ -1,15 +1,26 @@
-import { deletePost, savePost } from "./actions";
-import { getAllPosts } from "@/lib/blog";
-import { requireAdmin } from "@/lib/admin-auth";
-import { chatGPTSignOutPath } from "../chatgpt-auth";
-
-export const dynamic = "force-dynamic";
+export const dynamic = process.env.GITHUB_PAGES_BUILD === "1" ? "force-static" : "force-dynamic";
 export const metadata = {
   title: "Editorial Console",
   robots: { index: false, follow: false },
 };
 
 export default async function EditorialConsolePage() {
+  // The editorial console requires server-side authentication and D1. The
+  // public GitHub Pages export keeps this private route unavailable instead.
+  if (process.env.GITHUB_PAGES_BUILD === "1") {
+    return <main><h1>Not found</h1></main>;
+  }
+
+  const [actions, blog, auth, chatAuth] = await Promise.all([
+    import("./actions"),
+    import("@/lib/blog"),
+    import("@/lib/admin-auth"),
+    import("../chatgpt-auth"),
+  ]);
+  const { deletePost, savePost } = actions;
+  const { getAllPosts } = blog;
+  const { requireAdmin } = auth;
+  const { chatGPTSignOutPath } = chatAuth;
   const user = await requireAdmin();
   const posts = await getAllPosts();
 

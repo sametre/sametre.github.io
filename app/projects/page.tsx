@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { SiteFooter, SiteHeader } from "../site-shell";
+import { SalesforceBadge, SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   title: "Projeler",
   description:
-    "Samet ER'in e-ticaret, mobil uygulama, ERP, CRM ve Salesforce odaklı Karacabey Gross Market, Erler AVM ve R3 projeleri.",
+    "Samet ER'in e-ticaret, mobil uygulama, ERP, CRM, Salesforce ve Agentforce odaklı projeleri.",
   alternates: { canonical: "/projects" },
 };
 
@@ -75,11 +75,12 @@ export default function ProjectsPage() {
       <SiteHeader />
       <section className="subpage-hero shell projects-hero">
         <span className="section-number">(01) Projeler</span>
-        <h1>Fikirden operasyona,<br /><em>uçtan uca ürünler.</em></h1>
+        <SalesforceBadge label="Salesforce · Agentforce" />
+        <h1>Veriden aksiyona,<br /><em>uçtan uca ürünler.</em></h1>
         <p>
-          E-ticaret, mobil uygulama, ERP ve CRM katmanlarını gerçek operasyon
-          ihtiyaçlarına göre tasarlıyor; birbirinden kopuk sistemleri tek,
-          sürdürülebilir ürün deneyiminde buluşturuyorum.
+          E-ticaret, ERP, CRM ve Agentforce katmanlarını gerçek operasyon
+          ihtiyaçlarına göre tasarlıyor; dağınık veriyi ekiplerin güvenle aksiyon
+          alabildiği sürdürülebilir ürün deneyimlerine dönüştürüyorum.
         </p>
       </section>
 

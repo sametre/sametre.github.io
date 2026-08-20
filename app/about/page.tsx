@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { SiteFooter, SiteHeader, githubUrl, linkedinUrl } from "../site-shell";
+import { SalesforceBadge, SiteFooter, SiteHeader, githubUrl, linkedinUrl } from "../site-shell";
 
 export const metadata: Metadata = {
   title: "Hakkımda ve Sertifikalar",
   description:
-    "Bursa merkezli Salesforce ve Full-Stack Developer Samet ER'in teknoloji yolculuğu, uzmanlık alanları ve sertifikaları.",
+    "Bursa merkezli Salesforce, Agentforce ve Full-Stack Developer Samet ER'in teknoloji yolculuğu, uzmanlık alanları ve sertifikaları.",
   alternates: { canonical: "/about" },
 };
 
@@ -70,6 +70,7 @@ export default function AboutPage() {
 
       <section className="subpage-hero shell about-hero">
         <span className="section-number">(03) Hakkımda</span>
+        <SalesforceBadge label="Salesforce professional" />
         <h1>Merhaba, ben<br /><em>Samet ER.</em></h1>
         <p>
           Bursa&apos;da yaşayan; kurumsal yazılımlar, web teknolojileri ve
@@ -86,7 +87,7 @@ export default function AboutPage() {
             <img src="/samet-profile-square.png" alt="Salesforce Developer Samet ER portresi" />
           </div>
           <span className="profile-location">Bursa · Türkiye</span>
-          <span className="profile-role">Salesforce<br />Developer</span>
+          <span className="profile-role">Agentforce<br />Builder</span>
           <b className="profile-star">✦</b>
         </div>
         <div className="story-copy">
@@ -112,9 +113,9 @@ export default function AboutPage() {
             ekosistemiyle tanışmamı sağladı. Bugün Apex, Lightning Web
             Components, Flow ve entegrasyon teknolojileriyle CRM panelleri ve
             Salesforce çözümleri geliştiriyorum. Agentforce ve yapay zekâ
-            destekli müşteri deneyimleri üzerine çalışıyor; özellikle gerçek
-            zamanlı müşteri sorun giderme yaklaşımlarında uzmanlığımı
-            derinleştiriyorum.
+            destekli müşteri deneyimleri üzerine çalışıyor; güvenilir veri,
+            kontrollü aksiyonlar ve insan devri gereken hizmet senaryolarında
+            uzmanlığımı derinleştiriyorum.
           </p>
           <p>
             Kendimi tek bir teknoloji alanıyla sınırlamıyorum. Sürekli
@@ -127,7 +128,7 @@ export default function AboutPage() {
           <div className="principles expertise">
             <div><b>01</b><span>ERP &amp; kurumsal sistemler</span></div>
             <div><b>02</b><span>Web &amp; mobil ürünler</span></div>
-            <div><b>03</b><span>Salesforce &amp; yapay zekâ</span></div>
+            <div><b>03</b><span>Salesforce, Agentforce &amp; güvenilir AI</span></div>
           </div>
           <div className="profile-links">
             <a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn ↗</a>

@@ -28,6 +28,16 @@ a { color: inherit; text-decoration: none; }
 }
 .brand { display: inline-flex; align-items: center; }
 .brand img { display: block; width: 174px; height: auto; }
+.brand > .salesforce-badge { margin-left: 12px; }
+.salesforce-badge {
+  display: inline-flex; align-items: center; gap: 7px; width: fit-content;
+  color: #087da5; border: 1px solid rgba(0,161,224,.3); background: rgba(255,255,255,.7);
+  padding: 7px 10px; border-radius: 999px; font: 700 10px/1 Arial, sans-serif;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.salesforce-badge img { display: block; }
+.eyebrow .salesforce-badge { padding: 5px 8px; }
+.subpage-hero .salesforce-badge { margin-top: 22px; }
 .nav nav { display: flex; gap: 34px; font-size: 14px; }
 .nav nav a { transition: opacity .2s; }
 .nav nav a:hover { opacity: .55; }
